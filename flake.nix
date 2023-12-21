@@ -16,12 +16,6 @@
             };
             # pkgs = nixpkgs.legacyPackages.${system};
 
-            # The reason for using pkgs.symlinkJoin instead of just pkgs is to consolidate these various Rust-related components into a single symlink. This can be convenient for setting up a development environment or ensuring that specific tools are available in a unified location. It simplifies the management of Rust-related tools and makes it easier to reference them in the rest of the Nix configuration, for example, in the subsequent nativeBuildInputs section of the mkShell environment.
-            # rust-toolchain = pkgs.symlinkJoin {
-            #     name = "rust-toolchain";
-            #     paths = [ pkgs.rustc-wasm32 pkgs.cargo pkgs.cargo-watch pkgs.rust-analyzer pkgs.rustPlatform.rustcSrc ];
-            # };
-
             rust-toolchain = pkgs.rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
                 extensions = [ "rust-src" ];
                 #targets = [ "wasm32-unknown-unknown" ];
@@ -29,13 +23,9 @@
 
             nativeBuildInputs = with pkgs; [
                 pkg-config
-                rust-toolchain
             ];
 
             packages = with pkgs; [
-                wget
-                dbus
-                openssl_3
                 nodejs_18
             ];
 
