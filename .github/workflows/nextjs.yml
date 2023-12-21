@@ -53,8 +53,8 @@ jobs:
             exit 1
           fi
 
-      - name: Run a command with nix develop
-        run: nix develop && npm install && npm run build
+      - name: Build and Export with nix develop
+        run: nix develop && ${{ steps.detect-package-manager.outputs.manager }} install && ${{ steps.detect-package-manager.outputs.manager }} run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -64,9 +64,6 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-
-      - name: Static HTML export with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
