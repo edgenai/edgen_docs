@@ -38,6 +38,9 @@ jobs:
       - name: Run a command with nix develop
         run: nix develop
 
+      - name: run dummy echo
+        run: echo "hello world!!"
+
       - name: check if nix env is active
         run: echo $RUST_SRC_PATH
 
