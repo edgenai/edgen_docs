@@ -98,8 +98,8 @@ const endpoints: Array<Endpoint> = [
 
 function EndpointIcon({ icon: Icon }: { icon: Endpoint['icon'] }) {
   return (
-    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-emerald-300/10 dark:group-hover:ring-emerald-400">
-      <Icon className="h-5 w-5 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-emerald-300/10 dark:group-hover:stroke-emerald-400" />
+    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900/5 ring-1 ring-zinc-900/25 backdrop-blur-[2px] transition duration-300 group-hover:bg-white/50 group-hover:ring-zinc-900/25 dark:bg-white/7.5 dark:ring-white/15 dark:group-hover:bg-yellow-300/10 dark:group-hover:ring-yellow-400">
+      <Icon className="h-8 w-8 fill-zinc-700/10 stroke-zinc-700 transition-colors duration-300 group-hover:stroke-zinc-900 dark:fill-white/10 dark:stroke-zinc-400 dark:group-hover:fill-yellow-300/10 dark:group-hover:stroke-yellow-400" />
     </div>
   )
 }
@@ -127,7 +127,7 @@ function EndpointPattern({
         />
       </div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#D7EDEA] to-[#F4FBDF] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#202D2E] dark:to-[#303428]"
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#F3D7AE] to-[#EDE7D7] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#776942] to-[#776942]"
         style={style}
       />
       <motion.div
@@ -170,13 +170,13 @@ function Endpoint({ endpoint }: { endpoint: Endpoint }) {
       <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/7.5 group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20" />
       <div className="relative rounded-2xl px-4 pb-4 pt-16">
         <EndpointIcon icon={endpoint.icon} />
-        <h3 className="mt-4 text-sm font-semibold leading-7 text-zinc-900 dark:text-white">
+        <h3 className="mt-4 text-lg font-semibold leading-7 text-zinc-900 dark:text-white">
           <Link href={endpoint.href}>
             <span className="absolute inset-0 rounded-2xl" />
             {endpoint.name}
           </Link>
         </h3>
-        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="mt-1 text-base text-zinc-600 dark:text-zinc-400">
           {endpoint.description}
         </p>
       </div>

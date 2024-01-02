@@ -6,9 +6,9 @@ export default function typographyStyles({ theme }: PluginUtils) {
       css: {
         '--tw-prose-body': theme('colors.zinc.700'),
         '--tw-prose-headings': theme('colors.zinc.900'),
-        '--tw-prose-links': theme('colors.emerald.500'),
-        '--tw-prose-links-hover': theme('colors.emerald.600'),
-        '--tw-prose-links-underline': theme('colors.emerald.500 / 0.3'),
+        '--tw-prose-links': theme('colors.yellow.500'),
+        '--tw-prose-links-hover': theme('colors.yellow.600'),
+        '--tw-prose-links-underline': theme('colors.yellow.500 / 0.3'),
         '--tw-prose-bold': theme('colors.zinc.900'),
         '--tw-prose-counters': theme('colors.zinc.500'),
         '--tw-prose-bullets': theme('colors.zinc.300'),
@@ -24,9 +24,9 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
         '--tw-prose-invert-body': theme('colors.zinc.400'),
         '--tw-prose-invert-headings': theme('colors.white'),
-        '--tw-prose-invert-links': theme('colors.emerald.400'),
-        '--tw-prose-invert-links-hover': theme('colors.emerald.500'),
-        '--tw-prose-invert-links-underline': theme('colors.emerald.500 / 0.3'),
+        '--tw-prose-invert-links': theme('colors.yellow.400'),
+        '--tw-prose-invert-links-hover': theme('colors.yellow.500'),
+        '--tw-prose-invert-links-underline': theme('colors.yellow.500 / 0.3'),
         '--tw-prose-invert-bold': theme('colors.white'),
         '--tw-prose-invert-counters': theme('colors.zinc.400'),
         '--tw-prose-invert-bullets': theme('colors.zinc.600'),
@@ -42,7 +42,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
         // Base
         color: 'var(--tw-prose-body)',
-        fontSize: theme('fontSize.sm')[0],
+        fontSize: theme('fontSize.lg')[0],
         lineHeight: theme('lineHeight.7'),
 
         // Text
@@ -51,8 +51,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
           marginBottom: theme('spacing.6'),
         },
         '[class~="lead"]': {
-          fontSize: theme('fontSize.base')[0],
-          ...theme('fontSize.base')[1],
+          fontSize: theme('fontSize.lg')[0],
+          ...theme('fontSize.lg')[1],
         },
 
         // Lists
@@ -172,22 +172,22 @@ export default function typographyStyles({ theme }: PluginUtils) {
         h1: {
           color: 'var(--tw-prose-headings)',
           fontWeight: '700',
-          fontSize: theme('fontSize.2xl')[0],
+          fontSize: theme('fontSize.3xl')[0],
           ...theme('fontSize.2xl')[1],
           marginBottom: theme('spacing.2'),
         },
         h2: {
           color: 'var(--tw-prose-headings)',
           fontWeight: '600',
-          fontSize: theme('fontSize.lg')[0],
-          ...theme('fontSize.lg')[1],
+          fontSize: theme('fontSize.2xl')[0],
+          ...theme('fontSize.xl')[1],
           marginTop: theme('spacing.16'),
           marginBottom: theme('spacing.2'),
         },
         h3: {
           color: 'var(--tw-prose-headings)',
-          fontSize: theme('fontSize.base')[0],
-          ...theme('fontSize.base')[1],
+          fontSize: theme('fontSize.lg')[0],
+          ...theme('fontSize.lg')[1],
           fontWeight: '600',
           marginTop: theme('spacing.10'),
           marginBottom: theme('spacing.2'),
@@ -204,8 +204,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         figcaption: {
           color: 'var(--tw-prose-captions)',
-          fontSize: theme('fontSize.xs')[0],
-          ...theme('fontSize.xs')[1],
+          fontSize: theme('fontSize.sm')[0],
+          ...theme('fontSize.sm')[1],
           marginTop: theme('spacing.2'),
         },
 
@@ -298,17 +298,17 @@ export default function typographyStyles({ theme }: PluginUtils) {
           paddingLeft: theme('padding[1.5]'),
           boxShadow: 'inset 0 0 0 1px var(--tw-prose-code-ring)',
           backgroundColor: 'var(--tw-prose-code-bg)',
-          fontSize: theme('fontSize.2xs'),
+          fontSize: theme('fontSize.2sm'),
         },
         ':is(a, h1, h2, h3, blockquote, thead th) code': {
           color: 'inherit',
         },
         'h2 code': {
-          fontSize: theme('fontSize.base')[0],
+          fontSize: theme('fontSize.lg')[0],
           fontWeight: 'inherit',
         },
         'h3 code': {
-          fontSize: theme('fontSize.sm')[0],
+          fontSize: theme('fontSize.lg')[0],
           fontWeight: 'inherit',
         },
 

@@ -1,40 +1,50 @@
 import clsx from 'clsx'
 
 const variantStyles = {
-  small: '',
+  small: '-mb-1.5',
   medium: 'rounded-lg px-1.5 ring-1 ring-inset',
 }
 
 const colorStyles = {
-  emerald: {
-    small: 'text-emerald-500 dark:text-emerald-400',
+  yellow: {
+    small: 'text-yellow-500 dark:text-yellow-400',
     medium:
-      'ring-emerald-300 dark:ring-emerald-400/30 bg-emerald-400/10 text-emerald-500 dark:text-emerald-400',
+      'ring-yellow-300 dark:ring-yellow-400/30 bg-yellow-400/10 text-yellow-500 dark:text-yellow-400',
+    large: 'ring-yellow-300 dark:ring-yellow-400/30 bg-yellow-400/10 text-yellow-500 dark:text-yellow-400',
+
   },
   sky: {
     small: 'text-sky-500',
     medium:
       'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
+    large:
+    'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
   },
   amber: {
-    small: 'text-amber-500',
+    small: 'text-amber-600',
     medium:
-      'ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400',
+      'ring-amber-400 bg-amber-500/10 text-amber-600 dark:ring-amber-500/30 dark:bg-amber-500/10 dark:text-amber-500',
+    large:
+      'ring-amber-400 bg-amber-500/10 text-amber-600 dark:ring-amber-500/30 dark:bg-amber-500/10 dark:text-amber-500',
   },
   rose: {
     small: 'text-red-500 dark:text-rose-500',
     medium:
+      'ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400',
+    large:
       'ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400',
   },
   zinc: {
     small: 'text-zinc-400 dark:text-zinc-500',
     medium:
       'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
+    large:
+    'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
   },
 }
 
 const valueColorMap = {
-  GET: 'emerald',
+  GET: 'yellow',
   POST: 'sky',
   PUT: 'amber',
   DELETE: 'rose',
@@ -43,7 +53,7 @@ const valueColorMap = {
 export function Tag({
   children,
   variant = 'medium',
-  color = valueColorMap[children] ?? 'emerald',
+  color = valueColorMap[children] ?? 'yellow',
 }: {
   children: keyof typeof valueColorMap & (string | {})
   variant?: keyof typeof variantStyles
@@ -52,7 +62,7 @@ export function Tag({
   return (
     <span
       className={clsx(
-        'font-mono text-[0.625rem] font-semibold leading-6',
+        'font-mono text-sm font-semibold leading-6',
         variantStyles[variant],
         colorStyles[color][variant],
       )}
