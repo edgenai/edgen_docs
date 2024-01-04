@@ -24,7 +24,7 @@ function TopLevelNavItem({
     <li>
       <Link
         href={href}
-        className="text-lg leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+        className="text-base leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
       >
         {children}
       </Link>
@@ -73,7 +73,7 @@ export const Header = forwardRef<
       <div className="flex items-center gap-5 clg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-9"/> 
+          <Logo className="h-7"/> 
         </Link>
       </div>
       <div className="flex items-center gap-5">

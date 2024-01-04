@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 const variantStyles = {
-  small: '-mb-1.5',
+  small: '',
   medium: 'rounded-lg px-1.5 ring-1 ring-inset',
 }
 
@@ -62,7 +62,7 @@ export function Tag({
   return (
     <span
       className={clsx(
-        'font-mono text-sm font-semibold leading-6',
+        'font-mono text-xs font-semibold leading-6',
         variantStyles[variant],
         colorStyles[color][variant],
       )}

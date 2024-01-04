@@ -29,14 +29,14 @@ export function Layout({
           <div className="contents clg:pointer-events-auto clg:block clg:w-72 clg:overflow-y-auto clg:border-r clg:border-zinc-900/10 clg:px-6 clg:pb-8 clg:pt-4 clg:dark:border-white/10 xl:w-80">
             <div className="hidden clg:flex clg:mt-2">
               <Link href="/" aria-label="Home">
-                <Logo className="h-14" />
+                <Logo className="h-10" />
               </Link>
             </div>
             <Header />
             <Navigation className="hidden clg:mt-7 clg:block" />
           </div>
         </motion.header>
-        <div className="relative flex h-full flex-col px-4 pt-14 sm:px-6 clg:px-8">
+        <div className="relative flex h-full flex-col pt-14 sm:px-6 clg:px-8">
           <main className="flex-auto">{children}</main>
           <Footer />
         </div>

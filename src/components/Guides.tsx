@@ -38,7 +38,7 @@ export function Guides() {
             <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
               {guide.name}
             </h3>
-            <p className="mt-1 text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="mt-1 text-base text-zinc-600 dark:text-zinc-400">
               {guide.description}
             </p>
             <p className="mt-4">

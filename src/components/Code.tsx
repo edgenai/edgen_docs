@@ -125,7 +125,7 @@ function CodePanelHeader({ tag, label }: { tag?: string; label?: string }) {
         <span className="h-0.5 w-0.5 rounded-full bg-zinc-500" />
       )}
       {label && (
-        <span className="font-mono text-xs text-zinc-400">{label}</span>
+        <span className="font-mono text-sm text-zinc-400">{label}</span>
       )}
     </div>
   )
@@ -185,7 +185,7 @@ function CodeGroupHeader({
   return (
     <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent">
       {title && (
-        <h3 className="mr-auto pt-3 text-sm font-semibold text-white">
+        <h3 className="mr-auto pt-3 text-xs font-semibold text-white">
           {title}
         </h3>
       )}

@@ -467,14 +467,16 @@ export function Search() {
     <div className="hidden clg:block clg:max-w-md clg:flex-auto">
       <button
         type="button"
-        className="hidden h-10 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-lg text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 clg:flex"
+        className="hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 clg:flex"
         {...buttonProps}
       >
-        <SearchIcon className="h-7 w-7 stroke-current" />
-        Find something...
+        <SearchIcon className="h-full w-5 stroke-current" />
+        <div className='-mb-0.5'>
+          Find something...
+        </div>
         <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
-          <kbd className="font-sans text-lg">{modifierKey}</kbd>
-          <kbd className="font-sans text-lg">K</kbd>
+          <kbd className="font-sans text-sm">{modifierKey}</kbd>
+          <kbd className="font-sans text-sm">K</kbd>
         </kbd>
       </button>
       <Suspense fallback={null}>

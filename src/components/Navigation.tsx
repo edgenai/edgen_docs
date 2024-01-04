@@ -62,7 +62,7 @@ function NavLink({
       href={href}
       aria-current={active ? 'page' : undefined}
       className={clsx(
-        'flex justify-between items-center gap-2 py-1 pr-3 text-base font-medium transition',
+        'flex justify-between items-center gap-2 py-1 pr-3 text-sm transition',
         isAnchorLink ? 'pl-7' : 'pl-4',
         active
           ? 'text-zinc-900 dark:text-white'
@@ -101,7 +101,7 @@ function VisibleSectionHighlight({
       (section) => section.id === visibleSections[0],
     ),
   )
-  let itemHeight = remToPx(2.25)
+  let itemHeight = remToPx(2)
   let height = isPresent
     ? Math.max(1, visibleSections.length) * itemHeight
     : itemHeight
@@ -128,7 +128,7 @@ function ActivePageMarker({
   group: NavGroup
   pathname: string
 }) {
-  let itemHeight = remToPx(2.3)
+  let itemHeight = remToPx(2)
   let offset = remToPx(0.25)
   let activePageIndex = group.links.findIndex((link) => link.href === pathname)
   let top = offset + activePageIndex * itemHeight
@@ -168,7 +168,7 @@ function NavigationGroup({
     <li className={clsx('relative mt-6', className)}>
       <motion.h2
         layout="position"
-        className="text-lg font-semibold text-zinc-900 dark:text-white"
+        className="text-base font-semibold text-zinc-900 dark:text-white"
       >
         {group.title}
       </motion.h2>

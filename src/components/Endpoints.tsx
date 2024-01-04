@@ -168,7 +168,7 @@ function Endpoint({ endpoint }: { endpoint: Endpoint }) {
     >
       <EndpointPattern {...endpoint.pattern} mouseX={mouseX} mouseY={mouseY} />
       <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/7.5 group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20" />
-      <div className="relative rounded-2xl px-4 pb-4 pt-16">
+      <div className="relative rounded-2xl px-4 pb-4 pt-10">
         <EndpointIcon icon={endpoint.icon} />
         <h3 className="mt-4 text-lg font-semibold leading-7 text-zinc-900 dark:text-white">
           <Link href={endpoint.href}>
@@ -176,7 +176,7 @@ function Endpoint({ endpoint }: { endpoint: Endpoint }) {
             {endpoint.name}
           </Link>
         </h3>
-        <p className="mt-1 text-base text-zinc-600 dark:text-zinc-400">
+        <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
           {endpoint.description}
         </p>
       </div>
