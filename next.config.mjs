@@ -16,7 +16,7 @@ const withMDX = nextMDX({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/edgen_docs',
+  basePath: '',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 }
 
