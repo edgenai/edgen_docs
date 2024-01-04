@@ -27,7 +27,7 @@ export function Layout({
           className="contents clg:pointer-events-none clg:fixed clg:inset-0 clg:z-40 clg:flex"
         >
           <div className="contents clg:pointer-events-auto clg:block clg:w-72 clg:overflow-y-auto clg:border-r clg:border-zinc-900/10 clg:px-6 clg:pb-8 clg:pt-4 clg:dark:border-white/10 xl:w-80">
-            <div className="hidden clg:flex clg:mt-2">
+            <div className="hidden clg:flex clg:-mt-1">
               <Link href="/" aria-label="Home">
                 <Logo className="h-10" />
               </Link>
