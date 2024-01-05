@@ -152,7 +152,7 @@ function LoadingIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function HighlightQuery({ text, query }: { text: string; query: string }) {
   return (
     <Highlighter
-      highlightClassName="underline bg-transparent text-emerald-500"
+      highlightClassName="underline bg-transparent text-yellow-500"
       searchWords={[query]}
       autoEscape={true}
       textToHighlight={text}
@@ -197,7 +197,7 @@ function SearchResult({
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm font-medium text-zinc-900 group-aria-selected:text-emerald-500 dark:text-white"
+        className="text-sm font-medium text-zinc-900 group-aria-selected:text-yellow-500 dark:text-white"
       >
         <HighlightQuery text={result.title} query={query} />
       </div>
@@ -239,7 +239,7 @@ function SearchResults({
   if (collection.items.length === 0) {
     return (
       <div className="p-6 text-center">
-        <NoResultsIcon className="mx-auto h-5 w-5 stroke-zinc-900 dark:stroke-zinc-600" />
+        <NoResultsIcon className="mx-auto h-10 w-10 stroke-zinc-900 dark:stroke-zinc-600" />
         <p className="mt-2 text-xs text-zinc-700 dark:text-zinc-400">
           Nothing found for{' '}
           <strong className="break-words font-semibold text-zinc-900 dark:text-white">
@@ -307,7 +307,7 @@ const SearchInput = forwardRef<
       />
       {autocompleteState.status === 'stalled' && (
         <div className="absolute inset-y-0 right-3 flex items-center">
-          <LoadingIcon className="h-5 w-5 animate-spin stroke-zinc-200 text-zinc-900 dark:stroke-zinc-800 dark:text-emerald-400" />
+          <LoadingIcon className="h-7 w-7 animate-spin stroke-zinc-200 text-zinc-900 dark:stroke-zinc-800 dark:text-yellow-400" />
         </div>
       )}
     </div>
@@ -379,7 +379,7 @@ function SearchDialog({
           <div className="fixed inset-0 bg-zinc-400/25 backdrop-blur-sm dark:bg-black/40" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
+        <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 clg:px-8 clg:py-[15vh]">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -464,21 +464,23 @@ export function Search() {
   }, [])
 
   return (
-    <div className="hidden lg:block lg:max-w-md lg:flex-auto">
+    <div className="hidden clg:block clg:max-w-md clg:flex-auto">
       <button
         type="button"
-        className="hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 lg:flex"
+        className="hidden h-8 w-full items-center gap-2 rounded-full bg-white pl-2 pr-3 text-sm text-zinc-500 ring-1 ring-zinc-900/10 transition hover:ring-zinc-900/20 ui-not-focus-visible:outline-none dark:bg-white/5 dark:text-zinc-400 dark:ring-inset dark:ring-white/10 dark:hover:ring-white/20 clg:flex"
         {...buttonProps}
       >
-        <SearchIcon className="h-5 w-5 stroke-current" />
-        Find something...
+        <SearchIcon className="h-full w-5 stroke-current" />
+        <div className='-mb-0.5'>
+          Find something...
+        </div>
         <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
-          <kbd className="font-sans">{modifierKey}</kbd>
-          <kbd className="font-sans">K</kbd>
+          <kbd className="font-sans text-sm">{modifierKey}</kbd>
+          <kbd className="font-sans text-sm">K</kbd>
         </kbd>
       </button>
       <Suspense fallback={null}>
-        <SearchDialog className="hidden lg:block" {...dialogProps} />
+        <SearchDialog className="hidden clg:block" {...dialogProps} />
       </Suspense>
     </div>
   )
@@ -488,17 +490,17 @@ export function MobileSearch() {
   let { buttonProps, dialogProps } = useSearchProps()
 
   return (
-    <div className="contents lg:hidden">
+    <div className="contents clg:hidden">
       <button
         type="button"
-        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 ui-not-focus-visible:outline-none dark:hover:bg-white/5 lg:hidden"
+        className="flex h-7 w-7 items-center justify-center rounded-md transition hover:bg-zinc-900/5 ui-not-focus-visible:outline-none dark:hover:bg-white/5 clg:hidden"
         aria-label="Find something..."
         {...buttonProps}
       >
-        <SearchIcon className="h-5 w-5 stroke-zinc-900 dark:stroke-white" />
+        <SearchIcon className="h-7 w-7 stroke-zinc-900 dark:stroke-white" />
       </button>
       <Suspense fallback={null}>
-        <SearchDialog className="lg:hidden" {...dialogProps} />
+        <SearchDialog className="clg:hidden" {...dialogProps} />
       </Suspense>
     </div>
   )

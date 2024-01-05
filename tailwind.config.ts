@@ -40,6 +40,13 @@ export default {
         7.5: '0.075',
         15: '0.15',
       },
+      fill:{
+        cl1:'#333',
+        cl2:'#ffd000'
+      },
+      screens: {
+        'clg': '1120px',
+      },
     },
   },
   plugins: [typographyPlugin, headlessuiPlugin],
