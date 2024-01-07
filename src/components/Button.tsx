@@ -16,13 +16,13 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 const variantStyles = {
   primary:
-    ' py-1 px-4 rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-yellow-400/10 dark:text-yellow-400 dark:ring-1 dark:ring-inset dark:ring-yellow-400/20 dark:hover:bg-yellow-400/10 dark:hover:text-yellow-300 dark:hover:ring-yellow-300',
+    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-yellow-400/10 dark:text-yellow-400 dark:ring-1 dark:ring-inset dark:ring-yellow-400/20 dark:hover:bg-yellow-400/10 dark:hover:text-yellow-300 dark:hover:ring-yellow-300',
   secondary:
-    ' py-1 px-4 rounded-full bg-zinc-100 py-1 px-3 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300',
+    'rounded-full bg-zinc-100 py-1 px-3 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-800/40 dark:text-zinc-400 dark:ring-1 dark:ring-inset dark:ring-zinc-800 dark:hover:bg-zinc-800 dark:hover:text-zinc-300',
   filled:
-    ' py-1 px-4 rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-yellow-500 dark:text-white dark:hover:bg-yellow-400',
+    'rounded-full bg-zinc-900 py-1 px-3 text-white hover:bg-zinc-700 dark:bg-yellow-500 dark:text-white dark:hover:bg-yellow-400',
   outline:
-    ' py-1 px-4 rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white',
+    'rounded-full py-1 px-3 text-zinc-700 ring-1 ring-inset ring-zinc-900/10 hover:bg-zinc-900/2.5 hover:text-zinc-900 dark:text-zinc-400 dark:ring-white/10 dark:hover:bg-white/5 dark:hover:text-white',
   text: 'text-yellow-500 hover:text-yellow-600 dark:text-yellow-400 dark:hover:text-yellow-500',
 }
 
