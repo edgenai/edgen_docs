@@ -11,6 +11,7 @@ import {
 import { GridPattern } from '@/components/GridPattern'
 import { Heading } from '@/components/Heading'
 import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon'
+import { MicrophoneIcon } from '@/components/icons/MicrophoneIcon'
 import { EnvelopeIcon } from '@/components/icons/EnvelopeIcon'
 import { UserIcon } from '@/components/icons/UserIcon'
 import { UsersIcon } from '@/components/icons/UsersIcon'
@@ -28,70 +29,30 @@ interface Endpoint {
 
 const endpoints: Array<Endpoint> = [
   {
+    href: '/audio',
+    name: 'Audio',
+    description: 'Convert audio to text or text to audio.',
+    icon: MicrophoneIcon,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
     href: '/chat',
     name: 'Chat',
     description:
-      'Generate a new message given a message list.',
-    icon: UserIcon,
-    pattern: {
-      y: 16,
-      squares: [
-        [0, 1],
-        [1, 3],
-      ],
-    },
-  },
-  {
-    href: '/contacts',
-    name: 'Contacts',
-    description:
-      'Learn about the contact model and how to create, retrieve, update, delete, and list contacts.',
-    icon: UserIcon,
-    pattern: {
-      y: 16,
-      squares: [
-        [0, 1],
-        [1, 3],
-      ],
-    },
-  },
-  {
-    href: '/conversations',
-    name: 'Conversations',
-    description:
-      'Learn about the conversation model and how to create, retrieve, update, delete, and list conversations.',
+      'Create a chat response, given an list of input chat messages.',
     icon: ChatBubbleIcon,
     pattern: {
-      y: -6,
+      y: 16,
       squares: [
-        [-1, 2],
+        [0, 1],
         [1, 3],
       ],
-    },
-  },
-  {
-    href: '/messages',
-    name: 'Messages',
-    description:
-      'Learn about the message model and how to create, retrieve, update, delete, and list messages.',
-    icon: EnvelopeIcon,
-    pattern: {
-      y: 32,
-      squares: [
-        [0, 2],
-        [1, 4],
-      ],
-    },
-  },
-  {
-    href: '/groups',
-    name: 'Groups',
-    description:
-      'Learn about the group model and how to create, retrieve, update, delete, and list groups.',
-    icon: UsersIcon,
-    pattern: {
-      y: 22,
-      squares: [[0, 1]],
     },
   },
 ]
@@ -127,7 +88,7 @@ function EndpointPattern({
         />
       </div>
       <motion.div
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#F3D7AE] to-[#EDE7D7] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#776942] to-[#776942]"
+        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#F3D7AE] to-[#776942] to-[#EDE7D7] opacity-0 transition duration-300 group-hover:opacity-100 dark:from-[#776942]"
         style={style}
       />
       <motion.div

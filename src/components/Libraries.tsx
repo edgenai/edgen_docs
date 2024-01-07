@@ -4,24 +4,23 @@ import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
 import logoGo from '@/images/logos/go.svg'
 import logoNode from '@/images/logos/node.svg'
-import logoPhp from '@/images/logos/php.svg'
 import logoPython from '@/images/logos/python.svg'
-import logoRuby from '@/images/logos/ruby.svg'
+import logoRust from '@/images/logos/rust.svg'
 
 const libraries = [
   {
     href: '#',
-    name: 'PHP',
+    name: 'Python',
     description:
-      'A popular general-purpose scripting language that is especially suited to web development.',
-    logo: logoPhp,
+      'Python is a programming language that lets you work quickly and integrate systems more effectively.',
+    logo: logoPython,
   },
   {
     href: '#',
-    name: 'Ruby',
+    name: 'Rust',
     description:
-      'A dynamic, open source programming language with a focus on simplicity and productivity.',
-    logo: logoRuby,
+      'An open-source programming language that prioritizes memory safety and high performance.',
+    logo: logoRust,
   },
   {
     href: '#',
@@ -29,13 +28,6 @@ const libraries = [
     description:
       'Node.js® is an open-source, cross-platform JavaScript runtime environment.',
     logo: logoNode,
-  },
-  {
-    href: '#',
-    name: 'Python',
-    description:
-      'Python is a programming language that lets you work quickly and integrate systems more effectively.',
-    logo: logoPython,
   },
   {
     href: '#',

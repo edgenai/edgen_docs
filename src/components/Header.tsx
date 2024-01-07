@@ -48,7 +48,7 @@ export const Header = forwardRef<
       ref={ref}
       className={clsx(
         className,
-        'fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 clg:left-72 dlg:z-30 clg:px-8 xl:left-80',
+        'dlg:z-30 fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 clg:left-72 clg:px-8 xl:left-80',
         !isInsideMobileNavigation &&
           'backdrop-blur-sm dark:backdrop-blur clg:left-72 xl:left-80',
         isInsideMobileNavigation
@@ -73,15 +73,14 @@ export const Header = forwardRef<
       <div className="flex items-center gap-5 clg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-7"/> 
+          <Logo className="h-7" />
         </Link>
       </div>
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem href="/">API</TopLevelNavItem>
+            <TopLevelNavItem href="/">API Reference</TopLevelNavItem>
             <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-            <TopLevelNavItem href="#">Support</TopLevelNavItem>
           </ul>
         </nav>
         <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
@@ -90,7 +89,7 @@ export const Header = forwardRef<
           <ThemeToggle />
         </div>
         <div className="hidden min-[416px]:contents">
-          <Button href="#">Sign in</Button>
+          <Button href="https://edgen.co/download">Download</Button>
         </div>
       </div>
     </motion.div>
