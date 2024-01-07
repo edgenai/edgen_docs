@@ -41,7 +41,7 @@ export default {
         15: '0.15',
       },
       fill:{
-        cl1:'#333',
+        cl1:'#333333',
         cl2:'#ffd000'
       },
       screens: {
