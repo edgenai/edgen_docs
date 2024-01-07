@@ -125,7 +125,7 @@ function CodePanelHeader({ tag, label }: { tag?: string; label?: string }) {
         <span className="h-0.5 w-0.5 rounded-full bg-zinc-500" />
       )}
       {label && (
-        <span className="font-mono text-sm text-zinc-400">{label}</span>
+        <span className="font-mono text-xs text-zinc-400">{label}</span>
       )}
     </div>
   )
@@ -160,7 +160,7 @@ function CodePanel({
     <div className="group dark:bg-white/2.5">
       <CodePanelHeader tag={tag} label={label} />
       <div className="relative">
-        <pre className="overflow-x-auto p-4 text-sm text-white">{children}</pre>
+        <pre className="overflow-x-auto p-4 text-xs text-white">{children}</pre>
         <CopyButton code={code} />
       </div>
     </div>

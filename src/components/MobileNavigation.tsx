@@ -84,7 +84,7 @@ function MobileNavigationDialog({
       <Dialog
         onClickCapture={onClickDialog}
         onClose={close}
-        className="fixed inset-0 z-50 clg:hidden"
+        className="fixed inset-0 z-50 lg:hidden"
       >
         <Transition.Child
           as={Fragment}
@@ -158,11 +158,11 @@ export function MobileNavigation() {
     <IsInsideMobileNavigationContext.Provider value={true}>
       <button
         type="button"
-        className="flex h-8 w-8 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
+        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 dark:hover:bg-white/5"
         aria-label="Toggle navigation"
         onClick={toggle}
       >
-        <ToggleIcon className="w-4 stroke-zinc-900 dark:stroke-white" />
+        <ToggleIcon className="w-2.5 stroke-zinc-900 dark:stroke-white" />
       </button>
       {!isInsideMobileNavigation && (
         <Suspense fallback={null}>

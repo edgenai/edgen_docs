@@ -21,24 +21,18 @@ const colorStyles = {
       'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
   },
   amber: {
-    small: 'text-amber-600',
+    small: 'text-amber-500',
     medium:
-      'ring-amber-400 bg-amber-500/10 text-amber-600 dark:ring-amber-500/30 dark:bg-amber-500/10 dark:text-amber-500',
-    large:
-      'ring-amber-400 bg-amber-500/10 text-amber-600 dark:ring-amber-500/30 dark:bg-amber-500/10 dark:text-amber-500',
+      'ring-amber-300 bg-amber-400/10 text-amber-500 dark:ring-amber-400/30 dark:bg-amber-400/10 dark:text-amber-400',
   },
   rose: {
     small: 'text-red-500 dark:text-rose-500',
     medium:
       'ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400',
-    large:
-      'ring-rose-200 bg-rose-50 text-red-500 dark:ring-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400',
   },
   zinc: {
     small: 'text-zinc-400 dark:text-zinc-500',
     medium:
-      'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
-    large:
       'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
   },
 }
@@ -62,7 +56,7 @@ export function Tag({
   return (
     <span
       className={clsx(
-        'font-mono text-xs font-semibold leading-6',
+        'font-mono text-[0.625rem] font-semibold leading-6',
         variantStyles[variant],
         colorStyles[color][variant],
       )}

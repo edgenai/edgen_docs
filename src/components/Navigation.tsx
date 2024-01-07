@@ -36,7 +36,7 @@ function TopLevelNavItem({
     <li className="md:hidden">
       <Link
         href={href}
-        className="block py-1 text-lg text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+        className="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
       >
         {children}
       </Link>
@@ -62,7 +62,7 @@ function NavLink({
       href={href}
       aria-current={active ? 'page' : undefined}
       className={clsx(
-        'flex items-center justify-between gap-2 py-1 pr-3 text-sm transition',
+        'flex justify-between gap-2 py-1 pr-3 text-sm transition',
         isAnchorLink ? 'pl-7' : 'pl-4',
         active
           ? 'text-zinc-900 dark:text-white'
@@ -168,7 +168,7 @@ function NavigationGroup({
     <li className={clsx('relative mt-6', className)}>
       <motion.h2
         layout="position"
-        className="text-base font-semibold text-zinc-900 dark:text-white"
+        className="text-xs font-semibold text-zinc-900 dark:text-white"
       >
         {group.title}
       </motion.h2>
