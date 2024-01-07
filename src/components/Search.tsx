@@ -471,9 +471,7 @@ export function Search() {
         {...buttonProps}
       >
         <SearchIcon className="h-full w-5 stroke-current" />
-        <div className='-mb-0.5'>
-          Find something...
-        </div>
+        <div className="-mb-0.5">Find something...</div>
         <kbd className="ml-auto text-2xs text-zinc-400 dark:text-zinc-500">
           <kbd className="font-sans text-sm">{modifierKey}</kbd>
           <kbd className="font-sans text-sm">K</kbd>

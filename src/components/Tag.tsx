@@ -10,15 +10,15 @@ const colorStyles = {
     small: 'text-yellow-500 dark:text-yellow-400',
     medium:
       'ring-yellow-300 dark:ring-yellow-400/30 bg-yellow-400/10 text-yellow-500 dark:text-yellow-400',
-    large: 'ring-yellow-300 dark:ring-yellow-400/30 bg-yellow-400/10 text-yellow-500 dark:text-yellow-400',
-
+    large:
+      'ring-yellow-300 dark:ring-yellow-400/30 bg-yellow-400/10 text-yellow-500 dark:text-yellow-400',
   },
   sky: {
     small: 'text-sky-500',
     medium:
       'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
     large:
-    'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
+      'ring-sky-300 bg-sky-400/10 text-sky-500 dark:ring-sky-400/30 dark:bg-sky-400/10 dark:text-sky-400',
   },
   amber: {
     small: 'text-amber-600',
@@ -39,7 +39,7 @@ const colorStyles = {
     medium:
       'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
     large:
-    'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
+      'ring-zinc-200 bg-zinc-50 text-zinc-500 dark:ring-zinc-500/20 dark:bg-zinc-400/10 dark:text-zinc-400',
   },
 }
 
