@@ -42,7 +42,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
 
         // Base
         color: 'var(--tw-prose-body)',
-        fontSize: theme('fontSize.base')[0],
+        fontSize: theme('fontSize.sm')[0],
         lineHeight: theme('lineHeight.7'),
 
         // Text
@@ -52,7 +52,7 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         '[class~="lead"]': {
           fontSize: theme('fontSize.base')[0],
-          ...theme('fontSize.lg')[1],
+          ...theme('fontSize.base')[1],
         },
 
         // Lists
@@ -172,14 +172,14 @@ export default function typographyStyles({ theme }: PluginUtils) {
         h1: {
           color: 'var(--tw-prose-headings)',
           fontWeight: '700',
-          fontSize: theme('fontSize.3xl')[0],
+          fontSize: theme('fontSize.2xl')[0],
           ...theme('fontSize.2xl')[1],
           marginBottom: theme('spacing.2'),
         },
         h2: {
           color: 'var(--tw-prose-headings)',
           fontWeight: '600',
-          fontSize: theme('fontSize.xl')[0],
+          fontSize: theme('fontSize.lg')[0],
           ...theme('fontSize.lg')[1],
           marginTop: theme('spacing.16'),
           marginBottom: theme('spacing.2'),
@@ -204,8 +204,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         figcaption: {
           color: 'var(--tw-prose-captions)',
-          fontSize: theme('fontSize.sm')[0],
-          ...theme('fontSize.sm')[1],
+          fontSize: theme('fontSize.xs')[0],
+          ...theme('fontSize.xs')[1],
           marginTop: theme('spacing.2'),
         },
 
@@ -298,17 +298,17 @@ export default function typographyStyles({ theme }: PluginUtils) {
           paddingLeft: theme('padding[1.5]'),
           boxShadow: 'inset 0 0 0 1px var(--tw-prose-code-ring)',
           backgroundColor: 'var(--tw-prose-code-bg)',
-          fontSize: theme('fontSize.sm'),
+          fontSize: theme('fontSize.2xs'),
         },
         ':is(a, h1, h2, h3, blockquote, thead th) code': {
           color: 'inherit',
         },
         'h2 code': {
-          fontSize: theme('fontSize.xs')[0],
+          fontSize: theme('fontSize.base')[0],
           fontWeight: 'inherit',
         },
         'h3 code': {
-          fontSize: theme('fontSize.xs')[0],
+          fontSize: theme('fontSize.sm')[0],
           fontWeight: 'inherit',
         },
 

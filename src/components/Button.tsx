@@ -50,7 +50,7 @@ export function Button({
   let arrowIcon = (
     <ArrowIcon
       className={clsx(
-        'h-6 w-6',
+        'mt-0.5 h-5 w-5',
         variant === 'text' && 'relative top-px',
         arrow === 'left' && '-ml-1 rotate-180',
         arrow === 'right' && '-mr-1',

@@ -9,8 +9,8 @@ import { type Section } from '@/components/SectionProvider'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Edgen API Documentation',
-    default: 'Edgen API Documentation',
+    template: '%s - Edgen Documentation',
+    default: 'Edgen Documentation',
   },
 }
 
