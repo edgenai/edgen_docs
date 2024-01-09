@@ -97,6 +97,14 @@ function DiscordIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true" {...props}>
+      <path d="M 15.25,1.0000001 H 4.7500004 c -2.0707501,0 -3.7500001,1.67925 -3.7500001,3.7500001 V 15.25 c 0,2.070751 1.67925,3.75 3.7500001,3.75 H 15.25 C 17.3215,19 19,17.320751 19,15.25 V 4.7500002 C 19,2.6792501 17.3215,1.0000001 15.25,1.0000001 Z M 7.0000004,15.25 h -2.25 V 7.0000003 h 2.25 z m -1.125,-9.2009998 c -0.7245001,0 -1.3125001,-0.5925 -1.3125001,-1.323 0,-0.7305001 0.588,-1.323 1.3125001,-1.323 0.7245,0 1.3125,0.5924999 1.3125,1.323 0,0.7305 -0.5872501,1.323 -1.3125,1.323 z M 16.000001,15.25 h -2.25 v -4.203 c 0,-2.5259996 -3.000001,-2.3347496 -3.000001,0 V 15.25 H 8.5000006 V 7.0000003 H 10.75 v 1.32375 c 1.047001,-1.9395001 5.250001,-2.0827501 5.250001,1.8569997 z" />
+    </svg>
+  )
+}
+
 function SocialLink({
   href,
   icon: Icon,
@@ -121,13 +129,19 @@ function SmallPrint() {
         &copy; {new Date().getFullYear()} Binedge, Lda. All rights reserved.
       </p>
       <div className="flex gap-4">
-        <SocialLink href="#" icon={TwitterIcon}>
+        <SocialLink href="https://twitter.com/EdgenAI_" icon={TwitterIcon}>
           Follow us on Twitter
         </SocialLink>
-        <SocialLink href="#" icon={GitHubIcon}>
+        <SocialLink
+          href="https://www.linkedin.com/company/edgen"
+          icon={LinkedinIcon}
+        >
+          Follow us on LinkedIn
+        </SocialLink>
+        <SocialLink href="https://github.com/edgenai" icon={GitHubIcon}>
           Follow us on GitHub
         </SocialLink>
-        <SocialLink href="#" icon={DiscordIcon}>
+        <SocialLink href="https://discord.gg/QUXbwqdMRs" icon={DiscordIcon}>
           Join our Discord server
         </SocialLink>
       </div>
