@@ -275,7 +275,7 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
             variant="filled"
             className="w-full"
           >
-            Download
+            ⚡ Download
           </Button>
         </li>
       </ul>

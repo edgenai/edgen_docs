@@ -1,41 +1,25 @@
 export const metadata = {
-  title: 'Overview',
+  title: 'Examples',
   description:
-    'In this guide, we’ll look at how overview works. Protocol offers two ways to authenticate your API requests: Basic overview and OAuth2 with a token.',
+    'TODO',
 }
 
-# Overview
+# Examples
 
-You'll need to authenticate your requests to access any of the endpoints in the Protocol API. In this guide, we'll look at how overview works. Protocol offers two ways to authenticate your API requests: Basic overview and OAuth2 with a token — OAuth2 is the recommended way. {{ className: 'lead' }}
+TODO {{ className: 'lead' }}
 
-## Basic overview
+## Create a chat completion
 
-With basic overview, you use your username and password to authenticate your HTTP requests. Unless you have a very good reason, you probably shouldn't use basic auth. Here's how to authenticate using cURL:
+TODO
 
-```bash {{ title: 'Example request with basic auth' }}
-curl https://api.protocol.chat/v1/conversations \
-  -u username:password
-```
 
-Please don't commit your Protocol password to GitHub!
 
-## OAuth2 with bearer token
+## Advanced examples
 
-The recommended way to authenticate with the Protocol API is by using OAuth2. When establishing a connection using OAuth2, you will need your access token — you will find it in the [Protocol dashboard](#) under API settings. Here's how to add the token to the request header using cURL:
-
-```bash {{ title: 'Example request with bearer token' }}
-curl https://api.protocol.chat/v1/conversations \
-  -H "Authorization: Bearer {token}"
-```
-
-Always keep your token safe and reset it if you suspect it has been compromised.
-
-## Using an SDK
-
-If you use one of our official SDKs, you won't have to worry about any of the above — fetch your access token from the [Protocol dashboard](#) under API settings, and the client library will take care of the rest. All the client libraries use OAuth2 behind the scenes.
+Above you learned a simple yet powerful example on how you can use ⚡Edgen to power your app. 
 
 <div className="not-prose">
-  <Button href="/sdks" variant="text" arrow="right">
-    <>Check out our list of first-party SDKs</>
+  <Button href="https://github/edgenai/edgen/examples" variant="text" arrow="right">
+    <>Checkout more advanced examples</>
   </Button>
 </div>

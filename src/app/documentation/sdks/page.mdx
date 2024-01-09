@@ -3,7 +3,7 @@ import { SDKs } from '@/components/SDKs'
 export const metadata = {
   title: 'Edgen SDKs',
   description:
-    'Edgen offers fine-tuned JavaScript, Ruby, PHP, Python, and Go SDKs to make your life easier and give you the best experience when consuming the API.',
+    'Edgen offers several ready-to-use API Clients: Python, JavaScript, Rust and Go SDKs.'
 }
 
 export const sections = [
@@ -12,6 +12,12 @@ export const sections = [
 
 # Edgen SDKs
 
-The recommended way to interact with the Edgen API is by using one of our official SDKs. Today, Edgen offers fine-tuned JavaScript, Ruby, PHP, Python, and Go SDKs to make your life easier and give you the best experience when consuming the API. {{ className: 'lead' }}
+The recommended way to interact with the Edgen API is by using one of our official SDKs. {{ className: 'lead' }}
+
+<div className="not-prose">
+  <Button href="/api-reference" variant="text" arrow="right">
+    <>Checkout how to use our API Clients to interact with Edgen's endpoints</>
+  </Button>
+</div>
 
 <SDKs />

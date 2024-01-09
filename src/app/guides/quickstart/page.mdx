@@ -13,14 +13,19 @@ This guide will get you all set up and ready to use the Protocol API. We'll cove
   API key from your dashboard. You find it under [Settings &raquo; API](#).
 </Note>
 
+## Download and install ⚡Edgen
+<Button href="https://edgen.co/download">⚡ Download</Button>
+
 ## Choose your client
 
-Before making your first API request, you need to pick which API client you will use. In addition to good ol' cURL HTTP requests, Protocol offers clients for JavaScript, Python, and PHP. In the following example, you can see how to install each client.
+Before making your first API request, you need to pick which API client you will use. ⚡Edgen offers clients for Python, JavaScript, Rust, and Go. In the following example, you can see how to install each client.
+
+{/* TODO: Edit with our published packages */}
 
 <CodeGroup>
 
 ```bash {{ title: 'cURL' }}
-# cURL is most likely already installed on your machine
+# cURL is most likely already installed on your machine. If not, install it
 curl --version
 ```
 
@@ -43,14 +48,15 @@ composer require protocol/sdk
 
 <div className="not-prose">
   <Button href="/sdks" variant="text" arrow="right">
-    <>Check out our list of first-party SDKs</>
+    <>Check out our API Clients</>
   </Button>
 </div>
 
 ## Making your first API request
 
-After picking your preferred client, you are ready to make your first call to the Protocol API. Below, you can see how to send a GET request to the Conversations endpoint to get a list of all your conversations. In the cURL example, results are limited to ten conversations, the default page length for each client.
+You are ready to make your first call to the ⚡Edgen API. Below, you can see how to send a GET request to the chat completions endpoint to create a chat response, given an list of input chat messages.
 
+{/* TODO: Edit with our published packages */}
 <CodeGroup tag="GET" label="/v1/conversations">
 
 ```bash {{ title: 'cURL' }}
@@ -84,15 +90,8 @@ $client->conversations->list();
 </CodeGroup>
 
 <div className="not-prose">
-  <Button href="/conversations" variant="text" arrow="right">
-    <>Read the docs for the Conversations endpoint</>
+  <Button href="/api-reference/chat" variant="text" arrow="right">
+    <>Read the docs for the Chat endpoint</>
   </Button>
 </div>
 
-## What's next?
-
-Great, you're now set up with an API client and have made your first request to the API. Here are a few links that might be handy as you venture further into the Protocol API:
-
-- [Grab your API key from the Protocol dashboard](#)
-- [Check out the Conversations endpoint](/conversations)
-- [Learn about the different error messages in Protocol](/errors)

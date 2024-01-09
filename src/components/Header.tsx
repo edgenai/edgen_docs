@@ -94,7 +94,7 @@ export const Header = forwardRef<
           <ThemeToggle />
         </div>
         <div className="hidden min-[416px]:contents">
-          <Button href="https://edgen.co/download">Download</Button>
+          <Button href="https://edgen.co/download">⚡ Download</Button>
         </div>
       </div>
     </motion.div>
