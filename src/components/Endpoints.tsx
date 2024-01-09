@@ -29,7 +29,7 @@ interface Endpoint {
 
 const endpoints: Array<Endpoint> = [
   {
-    href: '/audio',
+    href: '/api-reference/audio',
     name: 'Audio',
     description: 'Convert audio to text or text to audio.',
     icon: MicrophoneIcon,
@@ -42,7 +42,7 @@ const endpoints: Array<Endpoint> = [
     },
   },
   {
-    href: '/chat',
+    href: '/api-reference/chat',
     name: 'Chat',
     description:
       'Create a chat response, given an list of input chat messages.',

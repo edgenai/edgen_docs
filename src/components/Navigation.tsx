@@ -242,8 +242,8 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Endpoints',
     links: [
-      { title: 'Audio', href: '/audio' },
-      { title: 'Chat', href: '/chat' },
+      { title: 'Audio', href: '/api-reference/audio' },
+      { title: 'Chat', href: '/api-reference/chat' },
     ],
   },
 ]
