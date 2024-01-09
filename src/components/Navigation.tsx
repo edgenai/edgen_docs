@@ -234,9 +234,16 @@ export const navigation: Array<NavGroup> = [
     title: 'Guides',
     links: [
       { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
-      { title: 'Errors', href: '/errors' },
+      { title: 'Quickstart', href: '/guides/quickstart' },
+      { title: 'Examples', href: '/guides/examples' },
+    ],
+  },
+  {
+    title: 'Documentation',
+    links: [
+      { title: 'Overview', href: '/documentation/overview' },
+      { title: 'SDKs', href: '/documentation/sdks' },
+      { title: 'Errors', href: '/documentation/errors' },
     ],
   },
   {
@@ -252,8 +259,9 @@ export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">API Reference</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
+        <TopLevelNavItem href="/guides">Guides</TopLevelNavItem>
+        <TopLevelNavItem href="/documentation">Documentation</TopLevelNavItem>
+        <TopLevelNavItem href="/api-reference">API Reference</TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}
